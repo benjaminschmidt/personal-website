@@ -2,7 +2,7 @@
 uv = "latest"
 
 [settings]
-install_before = "13d"
+minimum_release_age = "13d"
 lockfile = true
 python.uv_venv_auto = "source"
 
