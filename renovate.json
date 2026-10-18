@@ -23,7 +23,7 @@
       "matchManagers": [
         "mise"
       ],
-      "matchPackageNames": [
+      "matchDepNames": [
         "uv"
       ],
       "matchUpdateTypes": [
