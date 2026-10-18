@@ -11,11 +11,36 @@
   },
   "packageRules": [
     {
+      "description": "Do not delay updates from the private Forgejo registry",
       "matchRegistryUrls": [
         "https://forgejo.fuzzyhome.net/**"
       ],
       "minimumReleaseAge": "0 days",
       "minimumReleaseAgeBehaviour": "timestamp-optional"
+    },
+    {
+      "description": "Automerge uv patch updates",
+      "matchManagers": [
+        "mise"
+      ],
+      "matchPackageNames": [
+        "uv"
+      ],
+      "matchUpdateTypes": [
+        "patch"
+      ],
+      "automerge": true
+    },
+    {
+      "description": "Automerge trusted workflow actions",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "matchPackageNames": [
+        "actions/checkout",
+        "https://forgejo.fuzzyhome.net/phaib/simple-semantic-release"
+      ],
+      "automerge": true
     }
   ]
 }
