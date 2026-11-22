@@ -10,7 +10,7 @@ COPY . /app
 RUN --mount=type=cache,target=/root/.cache/uv \
     uv sync --locked --no-dev
 
-FROM docker.io/library/python:3.14-slim-trixie as production
+FROM docker.io/library/python:3.15-slim-trixie as production
 
 RUN groupadd --system --gid 999 nonroot \
  && useradd --system --gid 999 --uid 999 --create-home nonroot
