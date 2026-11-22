@@ -1,4 +1,4 @@
-FROM docker.io/astral/uv:python3.14-trixie-slim as builder
+FROM docker.io/astral/uv:python3.15-trixie-slim as builder
 ENV UV_COMPILE_BYTECODE=1 UV_LINK_MODE=copy UV_PYTHON_DOWNLOADS=0
 
 WORKDIR /app
